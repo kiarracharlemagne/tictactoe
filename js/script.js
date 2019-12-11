@@ -1,5 +1,12 @@
 
 
+var currentPlayer="x";
+var numberOfTurns=0
+var isGameOver=false;
+function performLogic(buttonId,tileId){
+    
+}
+
 
 
 
