@@ -4,11 +4,13 @@ var currentPlayer="x";
 var numberOfTurns=0
 var isGameOver=false;
 function performLogic(buttonId,tileId){
-    
+    console.log(tileId);
+    $(tileId).text(currentPlayer);
+    //creates an x or o
+    //remove the button 
+    //identify the next players turn
+    //check if there is a win or a draw
 }
-
-
-
 
 
 
@@ -47,4 +49,3 @@ $("#button8").click(function() {
 $("#button9").click(function() {
     performLogic("#button9","#tile9");
 });
-
