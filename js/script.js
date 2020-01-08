@@ -1,18 +1,44 @@
 
 
-var currentPlayer="x";
+var currentPlayer="X";
+
 var numberOfTurns=0
 var isGameOver=false;
 function performLogic(buttonId,tileId){
     console.log(tileId);
+    $(buttonId).hide();
+
+    console.log("currentPlayer", currentPlayer);
     $(tileId).text(currentPlayer);
+
     //creates an x or o
     //remove the button 
     //identify the next players turn
+    playerTwo();
+    addOneToNumberOfTurns();
+
+
+
     //check if there is a win or a draw
 }
+function playerTwo(){
+    if( currentPlayer==="X"){
+    currentPlayer ="O"
 
+    }
+    else if( currentPlayer==="O"){
+        currentPlayer="X"
+    }
+}
 
+function addOneToNumberOfTurns() {
+  numberOfTurns = numberOfTurns+1
+
+  if(numberOfTurns===9){
+    $("h1").text("Its a draw!") ;
+    isGameOver=true; 
+  }
+}
 
 $("#button1").click(function() {
     performLogic("#button1","#tile1");
